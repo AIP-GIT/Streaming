@@ -1,6 +1,6 @@
 # Streaming
 - Clone the repository
-git clone git@github.com:AIP-GIT/Streaming.git
+  * git clone git@github.com:AIP-GIT/Streaming.git
 - Run below command to bring the services up
   * cd Streaming
   * docker-compose up -d
