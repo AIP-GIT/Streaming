@@ -9,3 +9,9 @@
 
 - Run below command to stop the services
   * docker-compose down
+  
+# ===========High level Topics==============
+* architecture of streaming data processing systems
+* end-to-end solution for cost-effective analysis and visualization of streaming data - open source solns
+* implementation and application of algorithms and data structures required for the streaming applications.
+* Advanced streaming applications like Streaming SQL, Streaming Machine Learning
