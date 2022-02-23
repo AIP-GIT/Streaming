@@ -1,13 +1,18 @@
-$ docker-compose up -d
+## https://developer.confluent.io/quickstart/kafka-docker/?build=apps
 
-## UI Tool for kafka
-https://kafkatool.com/download.html
+docker-compose up -d
 
-## for cluster setup
-We must ensure that the service names and KAFKA_BROKER_ID are unique across the services.
+# Create a topic
+docker exec broker kafka-topics --bootstrap-server broker:9092 --create --topic quickstart
 
-Moreover, each service must expose a unique port to the host machine. Although zookeeper-1 and zookeeper-2 are listening on port 2181, 
-they're exposing it to the host via ports 22181 and 32181, respectively. 
-The same logic applies for the kafka-1 and kafka-2 services, where they'll be listening on ports 29092 and 39092, respectively.
+# write a message to the topic
+docker exec --interactive --tty broker kafka-console-producer --bootstrap-server broker:9092 --topic quickstart
+## type some line of text and hit Ctrl-D
 
+# Read message from the topic
+docker exec --interactive --tty broker kafka-console-consumer --bootstrap-server broker:9092 --topic quickstart --from-beginning
 
+## Ctrl-D to exit the producer, and Ctrl-C to stop the consumer.
+
+# Stop the Kafka broker 
+docker-compose down
