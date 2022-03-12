@@ -1,0 +1,23 @@
+# Remove java
+dpkg --list | grep jdk
+sudo apt remove openjdk-11-jre-headless:amd64
+
+
+# Install Java 8
+sudo apt install openjdk-8-jdk
+java -version
+
+#
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get install oracle-java8-installer
+sudo apt-get install oracle-java8-set-default
+
+# change default java
+sudo update-alternatives --config java
+sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
+# Twitter Account with elevated access and read write authorization
+# Start a VM with minimum 2 processors
+
+
+jupyter notebook --ip 192.168.29.57 --port 8090
