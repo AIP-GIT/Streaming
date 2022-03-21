@@ -1,0 +1,9 @@
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+# export SPARK_HOME='/home/ubuntu-poc/workspace/projects/Streaming/PySpark/spark-2.1.0-bin-hadoop2.7'
+export SPARK_HOME='/home/ubuntu-poc/workspace/projects/Streaming/PySpark/spark-3.2.1-bin-hadoop3.2'
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export PYSPARK_DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python
+export PATH=$SPARK_HOME:$PATH:~/.local/bin:$JAVA_HOME/bin:$JAVA_HOME/jre/bin

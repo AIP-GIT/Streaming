@@ -42,7 +42,7 @@ def sendData(c_socket):
 if __name__ == "__main__":
   s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)         # Create a socket object
   host = "127.0.0.1"     # Get local machine name
-  port = 5555                 # Reserve a port for your service.
+  port = 5556                 # Reserve a port for your service.
   s.bind((host, port))        # Bind to the port
 
   print("Listening on port: %s" % str(port))
